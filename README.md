@@ -18,12 +18,12 @@ G_State has three main components:
 
 ## What is the G_State paradigm?
 
-The G_State paradigm is an organizational model where the events that change the global properties are written in the same place where they are defined. This makes it easier to find where things go wrong. For example, if a global property was changed to an unintentional value, you don't have to dig around to find it. It will be in your
-G_State.js file below the global state. Also, changes made to the global properties must be formally described. This helps with debugging and readability.
+The G_State paradigm is an organizational model where the events that change the global properties are written in the same place where the global properties are defined. This create a structure that makes it easier to find bugs. For example, if a global property was changed to an unintentional value, you don't have to dig around to find it. It will be in your
+G_State.js file below the global state. Also, changes made to the global properties must be formally described so that they update the components that need to be updated. This helps with debugging and readability.
 
 ## What are the perks of using G_State?
 
-1. **An easy-to-visualize, manage, and organize global state.**  
+1. **Access to an easy-to-visualize, manage, and organize global state.**  
 2. **Selective and efficient rendering.**  
 3. **Easy-to-follow syntax and declarations that make sense.**  
 4. **Monitor global state events and renders.**  
@@ -32,17 +32,19 @@ G_State.js file below the global state. Also, changes made to the global propert
 
 ## How does it work?
 
-You start by creating a global state and defining its properties. The global properties are the properties that are shared by more than one component. You define how these global properties will be changed as method properties of the global properties. In these method properties or "events", you define how a global property value is changed. In your component files, you can define which properties will render a component when they are changed, and you can also call the method events whenever needed and access the global properties freely.
+You start by creating a global state and defining its properties. The global properties are the properties that are shared by more than one component. You define how these global properties will be changed as method properties or "events" in the global properties. In your component files, you can define which properties will  cause which components to rerender, and you can also call the method events whenever needed and access any global properties freely.
 
 **Creating a global state**
-Create a global state is as easy as creating an object. Create a G_State.js file under your src folder. In the G_State.js file import the G_State library. Define a state object with the global properties needed. Afterwards, define the global properties further, and design events for them.
+Create a global state is as easy as creating an object. Create a G_State.js file under your src folder. In the G_State.js file, import the G_State library. Define a state object and its global properties. Afterwards, define the global properties further, and design events for them.
 
 **Designing Events**
 You can design events explicitly or implicitly. An explicit definition describes a future state. An implicit
-definition calls the embedded changeTo method in a property. Note, however; that you can only design an event implicitly if a property has a value property. Either way, **any changes made to the global properties must be described as an event**. An event only changes one property and returns a description of the action that takes place.
+definition calls the embedded changeTo method of a property. Note, however; that you can only design an event implicitly if a property has a value property. Either way, **any changes made to the global properties must be described as an event**. An event only changes one property and returns a description of the action that takes place. They are necessary to describe as they broadcast the changes to all components.
 
     //In G_State.js
     import G_State from "g_state-management"
+    
+    //Define your state object. Think of this as a state prototype.
     let State = {
         property: {
     	    value : 0 ,
@@ -50,7 +52,8 @@ definition calls the embedded changeTo method in a property. Note, however; that
         },
         favoriteNumber: () => {}
     }
-    //Define properties further.
+    
+    //Define the properties further.
     State.favoriteNumber = () => {
         return State.property.increment() + State.property.value + 3
     }
