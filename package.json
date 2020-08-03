@@ -1,22 +1,22 @@
 {
-  "name": "@scythodemes/lightweightglobalstate",
-  "version": "1.2.8",
+  "name": "g_state-management",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "react": "^16.13.1"
+    "react": "16.13.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KonstantinVVictoria/lightweightglobalstate.git"
+    "url": "git+https://github.com/KonstantinVVictoria/G_State.git"
   },
   "author": "Konstantin Victoria",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/KonstantinVVictoria/lightweightglobalstate/issues"
+    "url": "https://github.com/KonstantinVVictoria/G_State/issues"
   },
-  "homepage": "https://github.com/KonstantinVVictoria/lightweightglobalstate#readme"
+  "homepage": "https://github.com/KonstantinVVictoria/G_State#readme"
 }

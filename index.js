@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 try {
-  var GlobalState = require("../../../src/G_State.js");
+  var GlobalState = require("../../src/G_State.js");
 } catch (ex) {
   console.error(
     "Please add a GlobalState.js file containing an object with all the global properties"
