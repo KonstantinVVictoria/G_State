@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "react-scripts test"
   },
   "dependencies": {
     "react": "16.13.1"
