@@ -14,7 +14,7 @@ G_State has three main components:
 
 1. **A global state** and all of its **global properties**.  
 2. **Events** that describe how a property is changed.  
-3. **Dependencies** that state which components will be rendered.  
+3. **Dependencies** that state which properties will cause a component to rerender when changed.  
 
 ## What is the G_State paradigm?
 
