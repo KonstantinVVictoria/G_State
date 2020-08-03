@@ -1,6 +1,5 @@
-![G_State Logo](https://i.imgur.com/CVtR8VU.png)
-
 # G_State
+![G_State Logo](https://i.imgur.com/CVtR8VU.png)
 
 ## What is G_State?
 
