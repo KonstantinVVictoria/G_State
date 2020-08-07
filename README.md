@@ -28,7 +28,7 @@ G_State.js file below the global state. Also in this paradigm, all the changes m
 
 1. **An easy-to-visualize, manage, and organize global state.**
 2. **Selective and efficient rendering.**
-3. **Easy-to-follow syntax and declarations that make sense.**
+3. **Easy-to-follow syntax.**
 4. **Monitor global state events and renders.**
 5. **Cleaner component definitions**
 6. **Work with both functional and class components.**
