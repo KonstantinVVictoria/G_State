@@ -1,10 +1,13 @@
 {
   "name": "g_state-management",
-  "version": "1.0.1",
+  "version": "1.2.9",
   "description": "",
   "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
   "dependencies": {
-    "react": "16.13.1"
+    "react": "^16.13.1"
   },
   "repository": {
     "type": "git",
